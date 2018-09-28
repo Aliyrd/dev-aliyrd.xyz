@@ -1,0 +1,24 @@
+
+/*landingMenu*/
+.landingMenu ul {
+	text-align:center;
+	position:relative; 
+	padding:0;
+	margin:0 auto;
+	list-style:none;
+	text-align:center;
+	position:relative; 
+}
+.landingMenu li {
+	display:inline-block;
+	//display:inline;
+	//vertical-align:top;
+	//zoom:1;
+}
+
+.landingMenu a {
+	display:inline-block;
+}
+
+
+

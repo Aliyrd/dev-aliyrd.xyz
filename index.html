@@ -1,0 +1,2755 @@
+
+
+<!DOCTYPE html>
+<html lang="ru"  manifest="cache.manifest">
+<head>
+<title>Тестирование, Контент-менеджмент, Юзабилити анализ</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Тестирование сайтов, тестирование мобильных приложений">
+ 
+
+<!-- Bootstrap core CSS -->
+<link href="assets/css/bootstrap.css" rel="stylesheet">
+
+<!-- Custom CSS -->
+<link href="assets/css/main.css" rel="stylesheet">
+<link href="assets/css/main-filter.css" rel="stylesheet">
+<link href="assets/css/font-awesome.min.css" rel="stylesheet">
+<link href="assets/css/animate-custom.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+<link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+<script src="assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/vtip.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
+<script type="text/javascript" src="assets/js/modernizr.custom.js"></script>
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+	
+	
+
+
+
+
+
+	
+	
+	
+    <script src="assets/js/jquery-1.11.1.min.js"></script> 	
+    <script src="assets/js/jquery.pricetable.min.js"></script> 
+	
+	<script type="text/javascript" src="assets/js/script.js"></script>
+	
+	
+    <script src="assets/js/jquery.mixitup.js"></script>  
+    <script src="assets/js/sort.js"></script>  	
+    <link href="assets/css/reset.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/pricetable.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/animate.css" rel="stylesheet" type="text/css">   
+	
+	
+	
+	
+<link rel="stylesheet" href="assets/css/style.css">
+
+
+<script async src="assets/js/jquery.liLanding.js"></script>
+<script>
+$(window).load(function(){
+	$('.landingMenu').liLanding();
+})
+</script> 
+<script type="text/javascript">	
+	 $(document).ready(function() { 
+		var pt = $('#priceTable1').priceTable();
+
+		/* menu style chooser panel */
+		$("#panel a.open").click(function(){
+			var _left = $("#panel").css("margin-left");
+			if (_left == "-210px"){
+				$("#panel").stop(true, true).animate({marginLeft: "-10px"}, 300);
+			}else{
+				$("#panel").stop(true, true).animate({marginLeft: "-210px"}, 300);
+			}
+			return false;
+		})
+
+		// $('#panel').on('mouseleave', function(event){
+		// 	$("#panel").stop(true, true).animate({marginLeft: "-210px"}, 300);			
+		// })
+
+		var colorStyle = 'greenStyle';
+		$('select#theColor').change(function () { 
+			var _c1 = $(this).children(":selected").val();
+			$('#priceTable1').removeClass(colorStyle).addClass(_c1);
+			$("#panel").stop(true, true).animate({marginLeft: "-210px"}, 300);			
+			colorStyle = _c1;
+		});	
+
+		$('select#theAnimation').change(function () { 
+			var _a = $(this).children(":selected").val();
+			pt.changeAnimate(_a);
+			$("#panel").stop(true, true).animate({marginLeft: "-210px"}, 300);			
+			
+		});	
+
+		
+
+	 });
+	 
+    </script> 
+
+
+<script type="text/javascript">
+        function init() {
+            var a = document.getElementById('clear_anchor');
+                a.onclick = function() {
+                history.pushState('', document.title, window.location.pathname);
+            };
+            
+        }
+    </script>
+
+	
+	
+	<style type="text/css" media="screen">
+
+		#panel {
+			position: fixed;
+			top: 100px;
+			z-index: 1200;
+		}
+		#panelContainer {
+			float: left;
+			font-size: 12px;
+			width: 170px;
+			height: 140px;
+			padding: 20px;
+			color: #CCC;			
+			background: #333;
+		}
+		.open{
+			background: url(images/panelbutton.png) no-repeat 0 0 transparent;
+			display: block;
+			height: 180px;
+			width: 34px;
+			float: right;
+			z-index: 999;
+		}
+		#panelContainer select{
+			margin-bottom: 40px;
+		}
+		#panelContainer select, #panelContainer select:focus {
+			width: 100%;
+			padding: 3px;
+			margin: 10px 0 15px 0;	
+			font-size: 12px;
+			border: none;
+		}
+	</style>	
+	   <style>
+
+	    
+
+	    #menu td{
+
+	        float: left;
+
+	        border: 1px solid #fff;
+
+	        height: 30px;
+
+	        width: 200px;
+
+	        text-align: center;
+
+	    }
+
+
+input[type="checkbox"] {
+    display: none;
+}
+nav label {    
+    display: none;   
+    padding: 3px 10px;
+    cursor: pointer;
+    transition: 0.3s;
+	float: right;
+	border-bottom: 16px double #ccc; 
+    border-top: 5px solid #ccc; 
+    content:"";
+    height: 5px; 
+    width:30px;
+	margin-top:20px;
+}
+nav label:hover{
+    color: #f00;
+}
+
+
+@media screen and (max-width: 800px) {
+    
+    nav label{
+         display: inline-block;
+    }
+    nav > ul {
+        display: none;
+    }
+    input[type="checkbox"]:checked ~ label + ul {
+        display: block;
+    }
+	input:checked {
+		display:none;
+   }
+    
+}
+
+	
+
+	    </style>
+	
+	   
+	
+
+</head>
+<body  onload="init()">
+
+<div class="conteine">
+<div id="navbar-main"> 
+  <!-- Fixed navbar -->
+  <div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+       <!-- <a class="navbar-brand" href="#home"><i class="fa fa-location-arrow"></i> Aliyrd</a>--> 
+	    <a class="navbar-brand" href=" ">Aliyrd</a>		
+		</div> 
+       
+      <div class="landingMenu" >
+        <nav>
+		    <input type="checkbox" name="menu" id="btn-menu">
+     
+ 
+			<label for="btn-menu"></label>
+
+			<ul class="nav navbar-right">
+			  <li> <a href="#land_1">Главная</a></li>
+			  <li> <a href="#land_2"> О нас</a></li>
+			  <li> <a href="#land_3"> Наши услуги</a></li>
+			  <li> <a href="#land_4"> Портфолио</a></li>
+			  <li> <a href="#land_5"> Наша команда</a></li>
+			  <li> <a href="#land_6"> Цены</a></li>
+			  <li> <a href="#land_7"> Отчёты</a></li>
+			  <li> <a href="#land_8"> Контакты</a></li>
+			</ul>
+		</nav>      
+
+
+      </div>
+     </div>
+  </div>
+	  
+	  
+      <!--/.nav-collapse --> 
+    </div>
+</div>
+
+	
+
+
+    <div id="land_1" class="landingItem ">
+        <div class="bg_1"  id="headerwrap">
+            <header class="clearfix">
+				<h1>Тестирование, Контент-менеджмент, Юзабилити анализ.</h1>
+				<p>Профессиональный подход к каждому проекту!</p>
+				<!--<a href="#land_4" id="clear_anchor" class="smoothScroll btn btn-lg">Посмотреть наши работы</a>-->
+			</header>
+        </div>
+    </div>
+    <div id="land_2" class="landingItem ">
+        <div class="bg_2"  id="about">
+              <div class="container">
+				<div class="row white">
+				  <div class="col-md-6"> <img class="img-responsive" src="assets/img/about/about1.jpg" alt="о нас"> </div>
+				  <div class="col-md-6">
+					<h3>О нас</h3>
+				
+					<p>Предлагаем услуги по тестированию сайтов, контент-менеджменту и юзабилити анализу.</p>
+					<p>Открыты к сотрудничеству, ищем надежных партнеров для долгосрочного сотрудничества и развития. Всегда готовы обсудить взаимовыгодные предложения.</p>
+					<p>Находим к каждому клиенту – особый подход. Мы внимательно анализируем требования наших клиентов, используя индивидуальный подход к их проблемам и потребностям. </p>
+					<p>Всегда стремимся максимально улучшить и повысить качество предоставляемых нами услуг, поэтому прислушиваемся к каждому мнению! Будем рады любым Вашим замечаниям, предложениям и конструктивной критике.</p>
+					<p><a href="https://www.fl.ru/users/Cerezius/opinions/?sort=1&period=&author=0#op_head" target="_blank" class="otziv" rel="nofollow">Отзывы наших клиентов</a></p>
+				  </div>
+				</div>
+				<!-- row --> 
+			</div>
+        </div>
+    </div>
+    <div id="land_3" class="landingItem ">
+        <div class="bg_3"  id="services">
+             <div class="container">
+				<div class="row">
+				  <h2 class="centered">Наши услуги</h2>
+				  <hr>
+				  <div class="col-lg-8 col-lg-offset-2">
+					<h3>Тестирование</h3>
+				  </div>
+				  <div class="col-lg-3 callout"> <i class="fa fa-func fa-3x"></i>
+					<h4>Функциональное тестирование</h4>
+					<p>Тестирование ПО в целях проверки реализуемости функциональных требований.</p>
+				  </div>
+				  <div class="col-lg-3 callout"> <i class="fa fa-conf fa-3x"></i>
+					<h4>Конфигурационное тестирование</h4>
+					<p>Тестирование, направленное на проверку работы ПО при различных конфигурациях системы.</p>
+				  </div>
+				  <div class="col-lg-3 callout"> <i class="fa fa-dot-reg-o fa-3x"></i>
+					<h4>Регрессионное тестирование</h4>
+					<p>Проверка изменений, сделанных в приложении или окружающей среде (починка дефекта, слияние кода и тд.)</p>
+				  </div>
+				  <div style="clear:both;"></div>
+				  <div class="col-lg-3 callout"> <i class="fa fa-mob-cart  fa-3x"></i>
+					<h4>Мобильное тестирование</h4>
+					<p>Тестирование мобильных приложениний и web-сайтов на мобильных устройствах.</p>
+				  </div>
+				  
+				   <div class="col-lg-3 callout"> <i class="fa fa-us-cart  fa-3x"></i>
+					<h4>Юзабилити тестирование</h4>
+					<p>Анализ удобства использования продукта.</p>
+				  </div>
+				  <div class="col-lg-3 callout"> <i class="fa fa-inst-cart  fa-3x"></i>
+					<h4>Тестирование инсталяций</h4>
+					<p>Проверка инсталляции, настройки, обновления и удаления приложения.</p>
+				  </div>
+				  <div style="clear:both;"></div>
+				  <hr>
+				  <div class="col-lg-8 col-lg-offset-2">
+					<h3>Контент-менеджмент</h3>
+				  </div>
+					<div class="col-lg-3 callout"> <i class="fa fa-shop fa-3x"></i>
+					<h4>Наполнение интернет магазина</h4>
+					<p>Полное описание товаров, фотографии, характеристики товаров и другая информация, которая свидетельствует о том, что товары актуальны.</p>
+				  </div>
+				  <div class="col-lg-3 callout"> <i class="fa fa-soc fa-3x"></i>
+					<h4>Ведение групп в социальных сетях</h4>
+					<p>Ведение групп и публичных страниц в вконтакте, facebook и других соц. сетях.</p>
+				  </div>
+				  <div class="col-lg-3 callout"> <i class="fa fa-dot-rer-o fa-3x"></i>
+					<h4>Рерайтинг</h4>
+					<p>Обработка исходных текстовых материалов в целях их дальнейшего использования.</p>
+				  </div>
+				  <div style="clear:both;"></div>
+				  <div class="col-lg-3 callout"> <i class="fa fa-info-cart  fa-3x"></i>
+					<h4>Актуализация информации</h4>
+					<p>Регулярное обновление сайта актуальной информацией, работа с каталогом товаров, модерирование статей, отзывов.</p>
+				  </div>
+				  
+				   <div class="col-lg-3 callout"> <i class="fa fa-link-cart  fa-3x"></i>
+					<h4>Перелинковка сайта</h4>
+					<p>Cвязывание страниц одного сайта или разных ресурсов гиперссылками.</p>
+				  </div>
+				  <div class="col-lg-3 callout"> <i class="fa fa-foto-cart  fa-3x"></i>
+					<h4>Обработка фото и видео</h4>
+					<p>Обработка фото и видео материала с последующим размещением на сайте.</p>
+				  </div>      
+				</div>
+				<!-- row --> 
+			  </div>
+        </div>
+    </div>
+    <div id="land_4" class="landingItem ">
+        <div class="bg_4" id="portfolio">
+            <div class="container">
+				<div class="row">
+				  <h2 class="centered">Портфолио</h2>
+				  <hr>
+				  <div class="col-lg-8 col-lg-offset-2 centered">
+					<p class="large">Примеры наших работ<br>
+					 (Выберите категорию)</p>
+				  </div>
+				</div>
+				<!-- /row -->
+				<div class="controls">
+				   
+				   <button class="filter btn" data-filter=".category-1">Тестирование</button>
+				   <button class="filter btn"  data-filter=".category-3">Тестирование моб. приложений</button>
+				   <button class="filter btn"  data-filter=".category-2">Контент-менеджмент</button>
+				</div>
+				<div class="container" id="container">
+				
+				
+
+				
+				
+				   
+				
+				
+				
+				  <div class="row"> 
+					
+					<!-- PORTFOLIO IMAGE 1 -->
+							<div class="col-md-4 grid mask mix category-1">
+					  <div class="grid mask">
+						<figure> <img class="img-responsive" src="assets/img/portfolio/folio02.jpg" alt="Sletat.ru">
+						  <figcaption>
+							 <h5>Sletat.ru</h5>
+							<a data-toggle="modal" href="#myModal1" class="btn btn-default">Подробнее</a> </figcaption>
+						  <!-- /figcaption --> 
+						</figure>
+						<!-- /figure --> 
+					  </div>
+					  <!-- /grid-mask --> 
+					</div>
+					
+					<!-- MODAL SHOW THE PORTFOLIO IMAGE. In this demo, category-1 links point to this modal. You should create
+										  a modal for each of your projects. -->
+					
+					<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-hidden="true">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">Sletat.ru</h4>
+						  </div>
+						  <div class="modal-body">
+							<p><img class="img-responsive" src="assets/img/portfolio/folio02.jpg" alt="Sletat.ru"></p>
+							<p>Работа в команде тестировщиков на данном проекте около 1 года.</p>
+							<p><b><a href="http://www.Sletat.ru" target="_blank">Перейти на сайт</a></b></p>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+						  </div>
+						</div>
+						<!-- /.modal-content --> 
+					  </div>
+					  <!-- /.modal-dialog --> 
+					</div>
+					<!-- /.modal --> 
+					
+					
+					
+					
+					 <!-- PORTFOLIO IMAGE 2 -->
+
+					<div class="col-md-4 grid mask mix category-1">
+					  <div class="grid mask">
+						<figure> <img class="img-responsive" src="assets/img/portfolio/folio08.jpg" alt="MDG">
+						  <figcaption>
+							<h5>MDG</h5>
+							<a data-toggle="modal" href="#myModal7" class="btn btn-default">Подробнее</a> </figcaption>
+						  <!-- /figcaption --> 
+						</figure>
+						<!-- /figure --> 
+					  </div>
+					  <!-- /grid-mask --> 
+					</div>
+					
+					 <div class="modal fade" id="myModal7" tabindex="-1" role="dialog" aria-hidden="true">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">MDG</h4>
+						  </div>
+						  <div class="modal-body">
+							<p><img class="img-responsive" src="assets/img/portfolio/folio08.jpg" alt="MDG"></p>
+							<p>Разработка чек-листов, тест-кейсов. Тестирование: функциональное, исследовательское, конфигурационное, регрессионное, приёмочное.</p>
+							<p><b><a href="http://mdg.ony.ru/" target="_blank">Перейти на сайт</a></b></p>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+						  </div>
+						</div>
+						<!-- /.modal-content --> 
+					  </div>
+					  <!-- /.modal-dialog --> 
+					</div>
+					<!-- /.modal --> 
+					
+					
+					
+					<!-- PORTFOLIO IMAGE 3 -->
+					<div class="col-md-4 grid mask mix category-1">
+					  <div class="grid mask">
+						<figure> <img class="img-responsive" src="assets/img/portfolio/folio43.jpg" alt="Black Star">
+						  <figcaption>
+							<h5>Black Star</h5>
+							<a data-toggle="modal" href="#myModal2" class="btn btn-default">Подробнее</a> </figcaption>
+						  <!-- /figcaption --> 
+						</figure>
+						<!-- /figure --> 
+					  </div>
+					  <!-- /grid-mask --> 
+					</div>
+				  
+				  
+				   <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-hidden="true">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">Black Star</h4>
+						  </div>
+						  <div class="modal-body">
+							<p><img class="img-responsive" src="assets/img/portfolio/folio43.jpg" alt="Black Star"></p>
+							<p>Тестирование: функциональное, исследовательское, конфигурационное, регрессионное, приёмочное, тестирование на моб. устройствах.</p>
+							<p><b><a href="http://www.bs2.uzavr.ru/" target="_blank">Перейти на сайт</a></b></p>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+						  </div>
+						</div>
+						<!-- /.modal-content --> 
+					  </div>
+					  <!-- /.modal-dialog --> 
+					</div>
+					<!-- /.modal --> 
+				 </div>
+				  <!-- /row -->  
+				  
+				  				  <div class="row"> 
+					
+					<!-- PORTFOLIO IMAGE 1 -->
+							<div class="col-md-4 grid mask mix category-1">
+					  <div class="grid mask">
+						<figure> <img class="img-responsive" src="assets/img/portfolio/folio41.jpg" alt="Общественная палата города Москвы">
+						  <figcaption>
+							 <h5>Общественная палата</h5>
+							<a data-toggle="modal" href="#myModal212" class="btn btn-default">Подробнее</a> </figcaption>
+						  <!-- /figcaption --> 
+						</figure>
+						<!-- /figure --> 
+					  </div>
+					  <!-- /grid-mask --> 
+					</div>
+					
+					<!-- MODAL SHOW THE PORTFOLIO IMAGE. In this demo, category-1 links point to this modal. You should create
+										  a modal for each of your projects. -->
+					
+					<div class="modal fade" id="myModal212" tabindex="-1" role="dialog" aria-hidden="true">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">Общественная палата города Москвы</h4>
+						  </div>
+						  <div class="modal-body">
+							<p><img class="img-responsive" src="assets/img/portfolio/folio41.jpg" alt="Общественная палата города Москвы"></p>
+							<p>Тестирование функционала, кроссбраузерное тестирование, тестирование на моб. устройствах.</p>
+							<p><b><a href="http://op.dev-vps.ru/ru-RU/index.html" target="_blank">Перейти на сайт</a></b></p>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+						  </div>
+						</div>
+						<!-- /.modal-content --> 
+					  </div>
+					  <!-- /.modal-dialog --> 
+					</div>
+					<!-- /.modal --> 
+					
+					
+					
+					
+					 <!-- PORTFOLIO IMAGE 2 -->
+
+					<div class="col-md-4 grid mask mix category-1">
+					  <div class="grid mask">
+						<figure> <img class="img-responsive" src="assets/img/portfolio/folio42.jpg" alt="Центр координации ГУ ИС">
+						  <figcaption>
+							<h5 style="padding:0;">Центр координации ГУ ИС</h5>
+							<a data-toggle="modal" href="#myModal213" class="btn btn-default">Подробнее</a> </figcaption>
+						  <!-- /figcaption --> 
+						</figure>
+						<!-- /figure --> 
+					  </div>
+					  <!-- /grid-mask --> 
+					</div>
+					
+					 <div class="modal fade" id="myModal213" tabindex="-1" role="dialog" aria-hidden="true">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">Центр координации ГУ ИС</h4>
+						  </div>
+						  <div class="modal-body">
+							<p><img class="img-responsive" src="assets/img/portfolio/folio42.jpg" alt="Центр координации ГУ ИС"></p>
+							<p>Разработка чек-листов, тест-кейсов. Тестирование: функциональное, исследовательское, конфигурационное, регрессионное, приёмочное.</p>
+							<p><b><a href="http://www.is.mos.ru/" target="_blank">Перейти на сайт</a></b></p>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+						  </div>
+						</div>
+						<!-- /.modal-content --> 
+					  </div>
+					  <!-- /.modal-dialog --> 
+					</div>
+					<!-- /.modal --> 
+					
+					
+					
+					<!-- PORTFOLIO IMAGE 3 -->
+					<div class="col-md-4 grid mask mix category-1">
+					  <div class="grid mask">
+						<figure> <img class="img-responsive" src="assets/img/portfolio/folio03.jpg" alt="Биржа">
+						  <figcaption>
+							<h5>Биржа</h5>
+							<a data-toggle="modal" href="#myModal22" class="btn btn-default">Подробнее</a> </figcaption>
+						  <!-- /figcaption --> 
+						</figure>
+						<!-- /figure --> 
+					  </div>
+					  <!-- /grid-mask --> 
+					</div>
+				  
+				  
+				   <div class="modal fade" id="myModal22" tabindex="-1" role="dialog" aria-hidden="true">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">Биржа</h4>
+						  </div>
+						  <div class="modal-body">
+							<p><img class="img-responsive" src="assets/img/portfolio/folio03.jpg" alt="Биржа"></p>
+							<p>Тестирование: функциональное, исследовательское, конфигурационное, регрессионное, приёмочное.</p>
+							<p><b><a href="https://birja.com/ru" target="_blank">Перейти на сайт</a></b></p>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+						  </div>
+						</div>
+						<!-- /.modal-content --> 
+					  </div>
+					  <!-- /.modal-dialog --> 
+					</div>
+					<!-- /.modal --> 
+				 </div>
+				  <!-- /row -->  
+				  
+				  				  <!-- PORTFOLIO IMAGE 4 -->
+				  <div class="row">
+					<div class="col-md-4 grid mask mix category-1">
+					  <div class="grid mask">
+						<figure> <img class="img-responsive" src="assets/img/portfolio/folio46.jpg" alt="Swaper">
+						  <figcaption>
+							<h5>Swaper</h5>
+							<a data-toggle="modal" href="#myModal3" class="btn btn-default">Подробнее</a> </figcaption>
+						  <!-- /figcaption --> 
+						</figure>
+						<!-- /figure --> 
+					  </div>
+					  <!-- /grid-mask --> 
+					</div>
+					
+							<!-- MODAL SHOW THE PORTFOLIO IMAGE. In this demo, category-1 links point to this modal. You should create
+										  a modal for each of your projects. -->
+					
+					<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-hidden="true">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">Swaper</h4>
+						  </div>
+						  <div class="modal-body">
+							<p><img class="img-responsive" src="assets/img/portfolio/folio46.jpg" alt="Swaper"></p>
+							<p>Сервис на стадии разработки и тестирования.</p>
+							<p><b><a href="http://swaper.ru" target="_blank">Перейти на сайт</a></b></p>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+						  </div>
+						</div>
+						<!-- /.modal-content --> 
+					  </div>
+					  <!-- /.modal-dialog --> 
+					</div>
+					<!-- /.modal --> 
+					
+					
+					
+					
+					<!-- PORTFOLIO IMAGE 5 -->
+					<div class="col-md-4 grid mask mix category-1">
+					  <div class="grid mask">
+						<figure> <img class="img-responsive" src="assets/img/portfolio/folio49.jpg" alt="Maggi">
+						  <figcaption>
+							<h5>Maggi</h5>
+							<a data-toggle="modal" href="#myModal41" class="btn btn-default">Подробнее</a> </figcaption>
+						  <!-- /figcaption --> 
+						</figure>
+						<!-- /figure --> 
+					  </div>
+					  <!-- /grid-mask --> 
+					</div>
+					
+							<!-- MODAL SHOW THE PORTFOLIO IMAGE. In this demo, category-1 links point to this modal. You should create
+										  a modal for each of your projects. -->
+					
+					<div class="modal fade" id="myModal41" tabindex="-1" role="dialog" aria-hidden="true">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">Maggi</h4>
+						  </div>
+						  <div class="modal-body">
+							<p><img class="img-responsive" src="assets/img/portfolio/folio49.jpg" alt="Maggi"></p>
+							<p>Тестирование: функциональное, исследовательское, конфигурационное, регрессионное, приёмочное. Периодическое тестирование нового функционала.</p>
+							<p><b><a href="https://www.maggi.ru/" target="_blank">Перейти на сайт</a></b></p>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+						  </div>
+						</div>
+						<!-- /.modal-content --> 
+					  </div>
+					  <!-- /.modal-dialog --> 
+					</div>
+					<!-- /.modal --> 
+					
+					<!-- PORTFOLIO IMAGE 6 -->
+					<div class="col-md-4 grid mask mix category-1">
+					  <div class="grid mask">
+						<figure> <img class="img-responsive" src="assets/img/portfolio/folio50.jpg" alt="Душевная Москва">
+						  <figcaption>
+							<h5>Душевная Москва</h5>
+							<a data-toggle="modal" href="#myModal50" class="btn btn-default">Подробнее</a> </figcaption>
+						  <!-- /figcaption --> 
+						</figure>
+						<!-- /figure --> 
+					  </div>
+					  <!-- /grid-mask --> 
+					</div>
+					<!-- /col --> 
+					
+							<!-- MODAL SHOW THE PORTFOLIO IMAGE. In this demo, category-1 links point to this modal. You should create
+										  a modal for each of your projects. -->
+					
+					<div class="modal fade" id="myModal50" tabindex="-1" role="dialog" aria-hidden="true">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">Душевная Москва</h4>
+						  </div>
+						  <div class="modal-body">
+							<p><img class="img-responsive" src="assets/img/portfolio/folio50.jpg" alt="Душевная Москва"></p>
+							<p>Тестирование сайта на десктопе и моб. устроствах.</p>
+							<p><b><a href="http://xn--80adfe5b7a9ayd.xn--80adxhks/" target="_blank">Перейти на сайт</a></b></p>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+						  </div>
+						</div>
+						<!-- /.modal-content --> 
+					  </div>
+					  <!-- /.modal-dialog --> 
+					</div>
+					<!-- /.modal --> 
+				  </div>
+				  <!-- /row --> 
+				  
+				  <!-- PORTFOLIO IMAGE 7 -->
+				  <div class="row">
+					<div class="col-md-4 grid mask mix category-1">
+					  <div class="grid mask">
+						<figure> <img class="img-responsive" src="assets/img/portfolio/folio04.jpg" alt="Стройдепо">
+						  <figcaption>
+							<h5>Стройдепо</h5>
+							<a data-toggle="modal" href="#myModal31" class="btn btn-default">Подробнее</a> </figcaption>
+						  <!-- /figcaption --> 
+						</figure>
+						<!-- /figure --> 
+					  </div>
+					  <!-- /grid-mask --> 
+					</div>
+					
+							<!-- MODAL SHOW THE PORTFOLIO IMAGE. In this demo, category-1 links point to this modal. You should create
+										  a modal for each of your projects. -->
+					
+					<div class="modal fade" id="myModal31" tabindex="-1" role="dialog" aria-hidden="true">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">Стройдепо</h4>
+						  </div>
+						  <div class="modal-body">
+							<p><img class="img-responsive" src="assets/img/portfolio/folio04.jpg" alt="Стройдепо"></p>
+							<p>Тестирование: функциональное, исследовательское, конфигурационное, регрессионное, приёмочное.</p>
+							<p><b><a href="http://stroydepo.ru/" target="_blank">Перейти на сайт</a></b></p>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+						  </div>
+						</div>
+						<!-- /.modal-content --> 
+					  </div>
+					  <!-- /.modal-dialog --> 
+					</div>
+					<!-- /.modal --> 
+					
+					
+					
+					
+					<!-- PORTFOLIO IMAGE 8 -->
+					<div class="col-md-4 grid mask mix category-1">
+					  <div class="grid mask">
+						<figure> <img class="img-responsive" src="assets/img/portfolio/folio05.jpg" alt="Российская ФПЛ">
+						  <figcaption>
+							<h5>Российская ФПЛ</h5>
+							<a data-toggle="modal" href="#myModal4" class="btn btn-default">Подробнее</a> </figcaption>
+						  <!-- /figcaption --> 
+						</figure>
+						<!-- /figure --> 
+					  </div>
+					  <!-- /grid-mask --> 
+					</div>
+					
+							<!-- MODAL SHOW THE PORTFOLIO IMAGE. In this demo, category-1 links point to this modal. You should create
+										  a modal for each of your projects. -->
+					
+					<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-hidden="true">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">Российская ФПЛ</h4>
+						  </div>
+						  <div class="modal-body">
+							<p><img class="img-responsive" src="assets/img/portfolio/folio05.jpg" alt="Российская ФПЛ"></p>
+							<p>Разработка чек-листов, тест-кейсов. Тестирование: функциональное, исследовательское, конфигурационное, регрессионное, приёмочное.</p>
+							<p><b><a href="http://new.nf.tv/" target="_blank">Перейти на сайт</a></b></p>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+						  </div>
+						</div>
+						<!-- /.modal-content --> 
+					  </div>
+					  <!-- /.modal-dialog --> 
+					</div>
+					<!-- /.modal --> 
+					
+					<!-- PORTFOLIO IMAGE 9 -->
+					<div class="col-md-4 grid mask mix category-1">
+					  <div class="grid mask">
+						<figure> <img class="img-responsive" src="assets/img/portfolio/folio06.jpg" alt="Onlinetours">
+						  <figcaption>
+							<h5>Onlinetours</h5>
+							<a data-toggle="modal" href="#myModal5" class="btn btn-default">Подробнее</a> </figcaption>
+						  <!-- /figcaption --> 
+						</figure>
+						<!-- /figure --> 
+					  </div>
+					  <!-- /grid-mask --> 
+					</div>
+					<!-- /col --> 
+					
+							<!-- MODAL SHOW THE PORTFOLIO IMAGE. In this demo, category-1 links point to this modal. You should create
+										  a modal for each of your projects. -->
+					
+					<div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-hidden="true">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">Onlinetours</h4>
+						  </div>
+						  <div class="modal-body">
+							<p><img class="img-responsive" src="assets/img/portfolio/folio06.jpg" alt="Onlinetours"></p>
+							<p>Тестирование менеджерского поиска, тестирование функционала.</p>
+							<p><b><a href="http://www.onlinetours.ru/" target="_blank">Перейти на сайт</a></b></p>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+						  </div>
+						</div>
+						<!-- /.modal-content --> 
+					  </div>
+					  <!-- /.modal-dialog --> 
+					</div>
+					<!-- /.modal --> 
+				  </div>
+				  <!-- /row --> 
+						<!-- PORTFOLIO IMAGE 10 -->
+				  <div class="row">
+					<div class="col-md-4 grid mask mix category-1">
+					  <div class="grid mask">
+						<figure> <img class="img-responsive" src="assets/img/portfolio/folio07.jpg" alt="Jqestate">
+						  <figcaption>
+							<h5>Jqestate</h5>
+							<a data-toggle="modal" href="#myModal6" class="btn btn-default">Подробнее</a> </figcaption>
+						  <!-- /figcaption --> 
+						</figure>
+						<!-- /figure --> 
+					  </div>
+					  <!-- /grid-mask --> 
+					</div>
+					
+					 <div class="modal fade" id="myModal6" tabindex="-1" role="dialog" aria-hidden="true">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">Jqestate</h4>
+						  </div>
+						  <div class="modal-body">
+							<p><img class="img-responsive" src="assets/img/portfolio/folio07.jpg" alt="Jqestate"></p>
+							<p>Разработка чек-листов, тест-кейсов. Тестирование: функциональное, исследовательское, конфигурационное, регрессионное, приёмочное.</p>
+							<p><b><a href="http://jqestate.ru/" target="_blank">Перейти на сайт</a></b></p>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+						  </div>
+						</div>
+						<!-- /.modal-content --> 
+					  </div>
+					  <!-- /.modal-dialog --> 
+					</div>
+					<!-- /.modal --> 
+					
+					<!-- PORTFOLIO IMAGE 11 -->
+				   
+							<div class="col-md-4 grid mask mix category-1">
+					  <div class="grid mask">
+						<figure> <img class="img-responsive" src="assets/img/portfolio/folio12.jpg" alt="Вотэтодом">
+						  <figcaption>
+							<h5>Вотэтодом</h5>
+							<a data-toggle="modal" href="#myModal8" class="btn btn-default">Подробнее</a> </figcaption>
+						  <!-- /figcaption --> 
+						</figure>
+						<!-- /figure --> 
+					  </div>
+					  <!-- /grid-mask --> 
+					</div>
+					
+					 <div class="modal fade" id="myModal8" tabindex="-1" role="dialog" aria-hidden="true">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">Вотэтодом</h4>
+						  </div>
+						  <div class="modal-body">
+							<p><img class="img-responsive" src="assets/img/portfolio/folio12" alt="Вотэтодом"></p>
+							<p>Функциональное тестирование сайта.</p>
+							<p><b><a href="http://вотэтодом.рф/"  target="_blank">Перейти на сайт</a></b></p>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+						  </div>
+						</div>
+						<!-- /.modal-content --> 
+					  </div>
+					  <!-- /.modal-dialog --> 
+					</div>
+					<!-- /.modal --> 
+
+				   
+				   
+				   <!-- PORTFOLIO IMAGE 12 -->
+					<div class="col-md-4 grid mask mix category-2 category-1">
+					  <div class="grid mask">
+						<figure> <img class="img-responsive" src="assets/img/portfolio/folio01.jpg" alt="DigBox.ru">
+						  <figcaption>
+							<h5>DigBox.ru</h5>
+							<a data-toggle="modal" href="#myModal" class="btn btn-default">Подробнее</a> </figcaption>
+						  <!-- /figcaption --> 
+						</figure>
+						<!-- /figure --> 
+					  </div>
+					  <!-- /grid-mask --> 
+					</div>
+					
+					
+					
+					<!-- MODAL SHOW THE PORTFOLIO IMAGE. In this demo, category-1 links point to this modal. You should create
+										  a modal for each of your projects. -->
+					
+					<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">DigBox.ru</h4>
+						  </div>
+						  <div class="modal-body">
+							<p><img class="img-responsive" src="assets/img/portfolio/folio01.jpg" alt="DigBox.ru"></p>
+							<p>Полное контентное обслуживание сайта. Ручное тестирование.</p>
+							<p><b><a href="http://www.DigBox.ru" target="_blank">Перейти на сайт</a></b></p>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+						  </div>
+						</div>
+						<!-- /.modal-content --> 
+					  </div>
+					  <!-- /.modal-dialog --> 
+					</div>
+					<!-- /.modal -->  
+					
+					<!-- PORTFOLIO IMAGE 13 -->
+					<div class="col-md-4 grid mask mix category-2">
+					  <div class="grid mask">
+						<figure> <img class="img-responsive" src="assets/img/portfolio/folio33.png" alt="A-Safe.ru">
+						  <figcaption>
+							<h5>A-Safe.ru</h5>
+							<a data-toggle="modal" href="#myModa33" class="btn btn-default">Подробнее</a> </figcaption>
+						  <!-- /figcaption --> 
+						</figure>
+						<!-- /figure --> 
+					  </div>
+					  <!-- /grid-mask --> 
+					</div>
+					
+					 <div class="modal fade" id="myModa33" tabindex="-1" role="dialog" aria-hidden="true">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">A-Safe.ru</h4>
+						  </div>
+						  <div class="modal-body">
+							<p><img class="img-responsive" src="assets/img/portfolio/folio33.png" alt="A-Safe.ru"></p>
+							<p>Полное контентное обслуживание сайта, тестирование вёрстки и функционала.</p>
+							<p><b><a href="http://a-safe.ru"  target="_blank">Перейти на сайт</a></b></p>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+						  </div>
+						</div>
+						<!-- /.modal-content --> 
+					  </div>
+					  <!-- /.modal-dialog --> 
+					</div>
+					<!-- PORTFOLIO IMAGE 14 -->
+					<div class="col-md-4 grid mask mix category-2">
+					  <div class="grid mask">
+						<figure> <img class="img-responsive" src="assets/img/portfolio/folio32.jpg" alt="safe77.ru">
+						  <figcaption>
+							<h5>Safe77.ru</h5>
+							<a data-toggle="modal" href="#myModal27" class="btn btn-default">Подробнее</a> </figcaption>
+						  <!-- /figcaption --> 
+						</figure>
+						<!-- /figure --> 
+					  </div>
+					  <!-- /grid-mask --> 
+					</div>
+					
+					 <div class="modal fade" id="myModal27" tabindex="-1" role="dialog" aria-hidden="true">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">Safe77.ru</h4>
+						  </div>
+						  <div class="modal-body">
+							<p><img class="img-responsive" src="assets/img/portfolio/folio32.jpg" alt="safe77.ru"></p>
+							<p>Полное контентное обслуживание сайта, тестирование вёрстки и функционала.</p>
+							<p><b><a href="http://www.safe77.ru/"  target="_blank">Перейти на сайт</a></b></p>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+						  </div>
+						</div>
+						<!-- /.modal-content --> 
+					  </div>
+					  <!-- /.modal-dialog --> 
+					</div>
+
+					<!-- /col --> 
+				  </div>
+				  <!-- /row -->
+				  				  <!-- /row -->
+
+				  <div class="row">
+							 <!-- PORTFOLIO IMAGE 15 -->
+					<div class="col-md-4 grid mask mix category-3">
+					  <div class="grid mask">
+						<figure> <img class="img-responsive" src="assets/img/portfolio/folio457.png" alt="Glossary">
+						  <figcaption>
+							<h5>Glossary</h5>
+							<a data-toggle="modal" href="#myModal90" class="btn btn-default">Подробнее</a> </figcaption>
+						  <!-- /figcaption --> 
+						</figure>
+						<!-- /figure --> 
+					  </div>
+					  <!-- /grid-mask --> 
+					</div>
+					
+					 <div class="modal fade" id="myModal90" tabindex="-1" role="dialog" aria-hidden="true">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">Glossary</h4>
+						  </div>
+						  <div class="modal-body">
+							<p><img class="img-responsive" src="assets/img/portfolio/folio457.png" alt="Glossary"></p>
+							<p>Ручное тестирование мобильного приложения на OS Android и iOS.</p>
+							<p><b><a href="https://play.google.com/store/apps/details?id=ru.julo.glossary" target="_blank">Перейти в Google Play</a></b></p>
+							<p><b><a href="https://itunes.apple.com/ru/app/glossary/id1247145428?mt=8" target="_blank">Перейти в App Store</a></b></p>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+						  </div>
+						</div>
+						<!-- /.modal-content --> 
+					  </div>
+					  <!-- /.modal-dialog --> 
+					</div>
+					
+							<!-- PORTFOLIO IMAGE 16 -->
+					<div class="col-md-4 grid mask mix category-3">
+					  <div class="grid mask">
+						<figure> <img class="img-responsive" src="assets/img/portfolio/folio45.jpg" alt="Браузер Marlin">
+						  <figcaption>
+							<h5>Браузер Marlin</h5>
+							<a data-toggle="modal" href="#myModal320" class="btn btn-default">Подробнее</a> </figcaption>
+						  <!-- /figcaption --> 
+						</figure>
+						<!-- /figure --> 
+					  </div>
+					  <!-- /grid-mask --> 
+					</div>
+					
+					 <div class="modal fade" id="myModal320" tabindex="-1" role="dialog" aria-hidden="true">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">Браузер Marlin</h4>
+						  </div>
+						  <div class="modal-body">
+							<p><img class="img-responsive" src="assets/img/portfolio/folio45.jpg" alt="Браузер Marlin"></p>
+							<p>Ручное тестирование мобильного приложения на Android.</p>
+							<p><b><a href="https://play.google.com/store/apps/details?id=marlin.browser" target="_blank">Перейти в Google Play</a></b></p>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+						  </div>
+						</div>
+						<!-- /.modal-content --> 
+					  </div>
+					  <!-- /.modal-dialog --> 
+					</div>
+					
+									<!-- PORTFOLIO IMAGE 17 -->
+					<div class="col-md-4 grid mask mix category-3">
+					  <div class="grid mask">
+						<figure> <img class="img-responsive" src="assets/img/portfolio/folio458.png" alt="Secure chat">
+						  <figcaption>
+							<h5>Secure chat</h5>
+							<a data-toggle="modal" href="#myModal343" class="btn btn-default">Подробнее</a> </figcaption>
+						  <!-- /figcaption --> 
+						</figure>
+						<!-- /figure --> 
+					  </div>
+					  <!-- /grid-mask --> 
+					</div>
+					
+					 <div class="modal fade" id="myModal343" tabindex="-1" role="dialog" aria-hidden="true">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">Secure chat</h4>
+						  </div>
+						  <div class="modal-body">
+							<p><img class="img-responsive" src="assets/img/portfolio/folio458.png" alt="Secure chat"></p>
+							<p>Ручное тестирование мобильного приложения на OS iOS и Android на всех этапах разработки. В процессе тестирования.</p>
+							<p><b><a href="https://play.google.com/store/apps/details?id=us.startmobile.securechat&hl=ru" target="_blank">Перейти в Google Play</a></b></p>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+						  </div>
+						</div>
+						<!-- /.modal-content --> 
+					  </div>
+					  <!-- /.modal-dialog --> 
+					</div>
+				  </div>
+
+				  <div class="row">
+							 <!-- PORTFOLIO IMAGE 18 -->
+					<div class="col-md-4 grid mask mix category-3">
+					  <div class="grid mask">
+						<figure> <img class="img-responsive" src="assets/img/portfolio/folio10.jpg" alt="ITN">
+						  <figcaption>
+							<h5>ITN</h5>
+							<a data-toggle="modal" href="#myModal9" class="btn btn-default">Подробнее</a> </figcaption>
+						  <!-- /figcaption --> 
+						</figure>
+						<!-- /figure --> 
+					  </div>
+					  <!-- /grid-mask --> 
+					</div>
+					
+					 <div class="modal fade" id="myModal9" tabindex="-1" role="dialog" aria-hidden="true">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">ITN</h4>
+						  </div>
+						  <div class="modal-body">
+							<p><img class="img-responsive" src="assets/img/portfolio/folio10.jpg" alt="ITN"></p>
+							<p>Ручное тестирование мобильного приложения на OS Android.</p>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+						  </div>
+						</div>
+						<!-- /.modal-content --> 
+					  </div>
+					  <!-- /.modal-dialog --> 
+					</div>
+					
+							<!-- PORTFOLIO IMAGE 19 -->
+					<div class="col-md-4 grid mask mix category-3">
+					  <div class="grid mask">
+						<figure> <img class="img-responsive" src="assets/img/portfolio/folio11.jpg" alt="Eleet">
+						  <figcaption>
+							<h5>Eleet</h5>
+							<a data-toggle="modal" href="#myModal10" class="btn btn-default">Подробнее</a> </figcaption>
+						  <!-- /figcaption --> 
+						</figure>
+						<!-- /figure --> 
+					  </div>
+					  <!-- /grid-mask --> 
+					</div>
+					
+					 <div class="modal fade" id="myModal10" tabindex="-1" role="dialog" aria-hidden="true">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">Eleet</h4>
+						  </div>
+						  <div class="modal-body">
+							<p><img class="img-responsive" src="assets/img/portfolio/folio11.jpg" alt="Eleet"></p>
+							<p>Ручное тестирование мобильного приложения.</p>
+							<p><b><a href="https://eleet.im/" target="_blank">Перейти на сайт</a></b></p>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+						  </div>
+						</div>
+						<!-- /.modal-content --> 
+					  </div>
+					  <!-- /.modal-dialog --> 
+					</div>
+					
+									<!-- PORTFOLIO IMAGE 20 -->
+					<div class="col-md-4 grid mask mix category-3">
+					  <div class="grid mask">
+						<figure> <img class="img-responsive" src="assets/img/portfolio/folio09.jpg" alt="AutoExp">
+						  <figcaption>
+							<h5>AutoExp</h5>
+							<a data-toggle="modal" href="#myModal11" class="btn btn-default">Подробнее</a> </figcaption>
+						  <!-- /figcaption --> 
+						</figure>
+						<!-- /figure --> 
+					  </div>
+					  <!-- /grid-mask --> 
+					</div>
+					
+					 <div class="modal fade" id="myModal11" tabindex="-1" role="dialog" aria-hidden="true">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">AutoExp</h4>
+						  </div>
+						  <div class="modal-body">
+							<p><img class="img-responsive" src="assets/img/portfolio/folio09.jpg" alt="AutoExp"></p>
+							<p>Ручное тестирование мобильного приложения на OS iOS, приложение доступно в App Store.Разработка чек-листов, тест-кейсов.</p>
+							<p><b><a href="https://itunes.apple.com/ru/app/autoexp-zatraty-na-avto-napominania/id933192341?mt=8" target="_blank">Перейти в App Store</a></b></p>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+						  </div>
+						</div>
+						<!-- /.modal-content --> 
+					  </div>
+					  <!-- /.modal-dialog --> 
+					</div>
+				  </div>
+				  
+				   <div class="row">
+							 <!-- PORTFOLIO IMAGE 21 -->
+					<div class="col-md-4 grid mask mix category-2">
+					  <div class="grid mask">
+						<figure> <img class="img-responsive" src="assets/img/portfolio/folio13.jpg" alt="Автономэнерго">
+						  <figcaption>
+							<h5>Автономэнерго</h5>
+							<a data-toggle="modal" href="#myModal12" class="btn btn-default">Подробнее</a> </figcaption>
+						  <!-- /figcaption --> 
+						</figure>
+						<!-- /figure --> 
+					  </div>
+					  <!-- /grid-mask --> 
+					</div>
+					
+					 <div class="modal fade" id="myModal12" tabindex="-1" role="dialog" aria-hidden="true">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">Автономэнерго</h4>
+						  </div>
+						  <div class="modal-body">
+							<p><img class="img-responsive" src="assets/img/portfolio/folio13.jpg" alt="Автономэнерго"></p>
+							<p>Создание разделов сайта, обработка фото, наполнение контентом, работа с прайс-листами.</p>
+							<p><b><a href="http://autonomenergo.com.ua"  target="_blank">Перейти на сайт</a></b></p>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+						  </div>
+						</div>
+						<!-- /.modal-content --> 
+					  </div>
+					  <!-- /.modal-dialog --> 
+					</div>
+					
+							<!-- PORTFOLIO IMAGE 22 -->
+					<div class="col-md-4 grid mask mix category-2">
+					  <div class="grid mask">
+						<figure> <img class="img-responsive" src="assets/img/portfolio/folio14.jpg" alt="ТестЭко">
+						  <figcaption>
+							<h5>ТестЭко</h5>
+							<a data-toggle="modal" href="#myModal13" class="btn btn-default">Подробнее</a> </figcaption>
+						  <!-- /figcaption --> 
+						</figure>
+						<!-- /figure --> 
+					  </div>
+					  <!-- /grid-mask --> 
+					</div>
+					
+					 <div class="modal fade" id="myModal13" tabindex="-1" role="dialog" aria-hidden="true">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">ТестЭко</h4>
+						  </div>
+						  <div class="modal-body">
+							<p><img class="img-responsive" src="assets/img/portfolio/folio14.jpg" alt="ТестЭко"></p>
+							<p>Постановка задач копирайтерам, дизайнеру, верстальщику. Проверка выполненной работы. Обработка видео и фото. Ведение групп в соц. сетях. Работа с СЯ, анализ Яндекс Метрики и тд.</p>
+							<p><b><a href="https://testeco.ru/" target="_blank">Перейти на сайт</a></b></p>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+						  </div>
+						</div>
+						<!-- /.modal-content --> 
+					  </div>
+					  <!-- /.modal-dialog --> 
+					</div>
+					
+									<!-- PORTFOLIO IMAGE 23 -->
+					<div class="col-md-4 grid mask mix category-2">
+					  <div class="grid mask">
+						<figure> <img class="img-responsive" src="assets/img/portfolio/folio15.jpg" alt="Cabriolife">
+						  <figcaption>
+							<h5>Cabriolife</h5>
+							<a data-toggle="modal" href="#myModal14" class="btn btn-default">Подробнее</a> </figcaption>
+						  <!-- /figcaption --> 
+						</figure>
+						<!-- /figure --> 
+					  </div>
+					  <!-- /grid-mask --> 
+					</div>
+					
+					 <div class="modal fade" id="myModal14" tabindex="-1" role="dialog" aria-hidden="true">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">Cabriolife</h4>
+						  </div>
+						  <div class="modal-body">
+							<p><img class="img-responsive" src="assets/img/portfolio/folio15.jpg" alt="Cabriolife"></p>
+							<p>Наполнение сайта контентом, редактирование фото, работа с техническими характеристиками авто.</p>
+							<p><b><a href="http://cabriolife.ru/" target="_blank">Перейти на сайт</a></b></p>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+						  </div>
+						</div>
+						<!-- /.modal-content --> 
+					  </div>
+					  <!-- /.modal-dialog --> 
+					</div>
+				  </div>
+				  <!-- /row --> 
+				  
+				   <div class="row">
+							 <!-- PORTFOLIO IMAGE 24 -->
+					<div class="col-md-4 grid mask mix category-2">
+					  <div class="grid mask">
+						<figure> <img class="img-responsive" src="assets/img/portfolio/folio16.jpg" alt="Женская обувь">
+						  <figcaption>
+							<h5>Женская обувь</h5>
+							<a data-toggle="modal" href="#myModal15" class="btn btn-default">Подробнее</a> </figcaption>
+						  <!-- /figcaption --> 
+						</figure>
+						<!-- /figure --> 
+					  </div>
+					  <!-- /grid-mask --> 
+					</div>
+					
+					 <div class="modal fade" id="myModal15" tabindex="-1" role="dialog" aria-hidden="true">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">Интенет-магазина женской обуви</h4>
+						  </div>
+						  <div class="modal-body">
+							<p><img class="img-responsive" src="assets/img/portfolio/folio16.jpg" alt="Женская обувь"></p>
+							<p>Наполнение контентом интенет-магазина женской обуви.</p>
+							<p><b><a href="http://obuv-now.ru/"  target="_blank">Перейти на сайт</a></b></p>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+						  </div>
+						</div>
+						<!-- /.modal-content --> 
+					  </div>
+					  <!-- /.modal-dialog --> 
+					</div>
+					
+							<!-- PORTFOLIO IMAGE 25 -->
+					<div class="col-md-4 grid mask mix category-2">
+					  <div class="grid mask">
+						<figure> <img class="img-responsive" src="assets/img/portfolio/folio17.jpg" alt="Planika">
+						  <figcaption>
+							<h5>Planika</h5>
+							<a data-toggle="modal" href="#myModal16" class="btn btn-default">Подробнее</a> </figcaption>
+						  <!-- /figcaption --> 
+						</figure>
+						<!-- /figure --> 
+					  </div>
+					  <!-- /grid-mask --> 
+					</div>
+					
+					 <div class="modal fade" id="myModal16" tabindex="-1" role="dialog" aria-hidden="true">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">Planika</h4>
+						  </div>
+						  <div class="modal-body">
+							<p><img class="img-responsive" src="assets/img/portfolio/folio17.jpg" alt="Planika"></p>
+							<p>Создание структуры сайта, обработка фото, наполнение контентом, верстка отдельных элементов.</p>
+							<p><b><a href="http://planika.ru/" target="_blank">Перейти на сайт</a></b></p>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+						  </div>
+						</div>
+						<!-- /.modal-content --> 
+					  </div>
+					  <!-- /.modal-dialog --> 
+					</div>
+					
+									<!-- PORTFOLIO IMAGE 26 -->
+					<div class="col-md-4 grid mask mix category-2">
+					  <div class="grid mask">
+						<figure> <img class="img-responsive" src="assets/img/portfolio/folio18.jpg" alt="Expedea">
+						  <figcaption>
+							<h5>Expedea</h5>
+							<a data-toggle="modal" href="#myModal17" class="btn btn-default">Подробнее</a> </figcaption>
+						  <!-- /figcaption --> 
+						</figure>
+						<!-- /figure --> 
+					  </div>
+					  <!-- /grid-mask --> 
+					</div>
+					
+					 <div class="modal fade" id="myModal17" tabindex="-1" role="dialog" aria-hidden="true">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">Expedea</h4>
+						  </div>
+						  <div class="modal-body">
+							<p><img class="img-responsive" src="assets/img/portfolio/folio18.jpg" alt="Expedea"></p>
+							<p>Создание разделов, обработка видео и фото, наполнение контентом, рерайт текстов.</p>
+							<p><b><a href="http://www.expedea.ru/" target="_blank">Перейти на сайт</a></b></p>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+						  </div>
+						</div>
+						<!-- /.modal-content --> 
+					  </div>
+					  <!-- /.modal-dialog --> 
+					</div>
+				  </div>
+				  <!-- /row --> 
+				  
+				   <div class="row">
+							 <!-- PORTFOLIO IMAGE 27 -->
+					<div class="col-md-4 grid mask mix category-2">
+					  <div class="grid mask">
+						<figure> <img class="img-responsive" src="assets/img/portfolio/folio19.jpg" alt="Mydiv">
+						  <figcaption>
+							<h5>Mydiv</h5>
+							<a data-toggle="modal" href="#myModal18" class="btn btn-default">Подробнее</a> </figcaption>
+						  <!-- /figcaption --> 
+						</figure>
+						<!-- /figure --> 
+					  </div>
+					  <!-- /grid-mask --> 
+					</div>
+					
+					 <div class="modal fade" id="myModal18" tabindex="-1" role="dialog" aria-hidden="true">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">Mydiv</h4>
+						  </div>
+						  <div class="modal-body">
+							<p><img class="img-responsive" src="assets/img/portfolio/folio19.jpg" alt="Mydiv"></p>
+							<p>Наполнение контентом, проверка актуальности программ.</p>
+							<p><b><a href="http://mydiv.net/"  target="_blank">Перейти на сайт</a></b></p>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+						  </div>
+						</div>
+						<!-- /.modal-content --> 
+					  </div>
+					  <!-- /.modal-dialog --> 
+					</div>
+					
+							<!-- PORTFOLIO IMAGE 28 -->
+					<div class="col-md-4 grid mask mix category-2">
+					  <div class="grid mask">
+						<figure> <img class="img-responsive" src="assets/img/portfolio/folio20.jpg" alt="Airtesteco">
+						  <figcaption>
+							<h5>Airtesteco</h5>
+							<a data-toggle="modal" href="#myModal19" class="btn btn-default">Подробнее</a> </figcaption>
+						  <!-- /figcaption --> 
+						</figure>
+						<!-- /figure --> 
+					  </div>
+					  <!-- /grid-mask --> 
+					</div>
+					
+					 <div class="modal fade" id="myModal19" tabindex="-1" role="dialog" aria-hidden="true">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">Airtesteco</h4>
+						  </div>
+						  <div class="modal-body">
+							<p><img class="img-responsive" src="assets/img/portfolio/folio20.jpg" alt="Airtesteco"></p>
+							<p>Постановка задач копирайтерам, дизайнеру, верстальщику. Проверка выполненной работы. Обработка видео и фото. Ведение групп в соц. сетях. Работа с СЯ, анализ Яндекс Метрики и тд.</p>
+							<p><b><a href="http://airtesteco.ru/" target="_blank">Перейти на сайт</a></b></p>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+						  </div>
+						</div>
+						<!-- /.modal-content --> 
+					  </div>
+					  <!-- /.modal-dialog --> 
+					</div>
+					
+									<!-- PORTFOLIO IMAGE 29 -->
+					<div class="col-md-4 grid mask mix category-2">
+					  <div class="grid mask">
+						<figure> <img class="img-responsive" src="assets/img/portfolio/folio21.jpg" alt="Sator.pro">
+						  <figcaption>
+							<h5>Sator.pro</h5>
+							<a data-toggle="modal" href="#myModal20" class="btn btn-default">Подробнее</a> </figcaption>
+						  <!-- /figcaption --> 
+						</figure>
+						<!-- /figure --> 
+					  </div>
+					  <!-- /grid-mask --> 
+					</div>
+					
+					 <div class="modal fade" id="myModal20" tabindex="-1" role="dialog" aria-hidden="true">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">Sator.pro</h4>
+						  </div>
+						  <div class="modal-body">
+							<p><img class="img-responsive" src="assets/img/portfolio/folio21.jpg" alt="Sator.pro"></p>
+							<p>Контентное обслуживание сайтов клиентов компании САТОР.</p>
+							<p><b><a href="http://sator.pro/" target="_blank">Перейти на сайт</a></b></p>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+						  </div>
+						</div>
+						<!-- /.modal-content --> 
+					  </div>
+					  <!-- /.modal-dialog --> 
+					</div>
+				  </div>
+				  <!-- /row --> 
+				  
+				  <div class="row">
+							 <!-- PORTFOLIO IMAGE 30 -->
+					<div class="col-md-4 grid mask mix category-2">
+					  <div class="grid mask">
+						<figure> <img class="img-responsive" src="assets/img/portfolio/folio22.jpg" alt="Panattasport">
+						  <figcaption>
+							<h5>Panattasport</h5>
+							<a data-toggle="modal" href="#myModal21" class="btn btn-default">Подробнее</a> </figcaption>
+						  <!-- /figcaption --> 
+						</figure>
+						<!-- /figure --> 
+					  </div>
+					  <!-- /grid-mask --> 
+					</div>
+					
+					 <div class="modal fade" id="myModal21" tabindex="-1" role="dialog" aria-hidden="true">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">Panattasport</h4>
+						  </div>
+						  <div class="modal-body">
+							<p><img class="img-responsive" src="assets/img/portfolio/folio22.jpg" alt="Panattasport"></p>
+							<p>Наполнение контентом, создание разделов, обработка фото.</p>
+							<p><b><a href="http://www.panattasport.ru/"  target="_blank">Перейти на сайт</a></b></p>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+						  </div>
+						</div>
+						<!-- /.modal-content --> 
+					  </div>
+					  <!-- /.modal-dialog --> 
+					</div>
+					
+							<!-- PORTFOLIO IMAGE 31 -->
+					<div class="col-md-4 grid mask mix category-2">
+					  <div class="grid mask">
+						<figure> <img class="img-responsive" src="assets/img/portfolio/folio23.jpg" alt="FoxSale">
+						  <figcaption>
+							<h5>FoxSale</h5>
+							<a data-toggle="modal" href="#myModal22" class="btn btn-default">Подробнее</a> </figcaption>
+						  <!-- /figcaption --> 
+						</figure>
+						<!-- /figure --> 
+					  </div>
+					  <!-- /grid-mask --> 
+					</div>
+					
+					 <div class="modal fade" id="myModal22" tabindex="-1" role="dialog" aria-hidden="true">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">FoxSale</h4>
+						  </div>
+						  <div class="modal-body">
+							<p><img class="img-responsive" src="assets/img/portfolio/folio23.jpg" alt="FoxSale"></p>
+							<p>Создание структуры сайта, добавление контента, обработка фото, работа с прайс-листами.</p>
+							<p><b><a href="http://fox-sale.com.ua/" target="_blank">Перейти на сайт</a></b></p>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+						  </div>
+						</div>
+						<!-- /.modal-content --> 
+					  </div>
+					  <!-- /.modal-dialog --> 
+					</div>
+					
+									<!-- PORTFOLIO IMAGE 32 -->
+					<div class="col-md-4 grid mask mix category-2">
+					  <div class="grid mask">
+						<figure> <img class="img-responsive" src="assets/img/portfolio/folio24.jpg" alt="RREF AWARDS">
+						  <figcaption>
+							<h5>RREF AWARDS</h5>
+							<a data-toggle="modal" href="#myModal23" class="btn btn-default">Подробнее</a> </figcaption>
+						  <!-- /figcaption --> 
+						</figure>
+						<!-- /figure --> 
+					  </div>
+					  <!-- /grid-mask --> 
+					</div>
+					
+					 <div class="modal fade" id="myModal23" tabindex="-1" role="dialog" aria-hidden="true">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">RREF AWARDS</h4>
+						  </div>
+						  <div class="modal-body">
+							<p><img class="img-responsive" src="assets/img/portfolio/folio24.jpg" alt="RREF AWARDS"></p>
+							<p>Внесение новых объектов недвижимости, редактирование имеющися, размещение баннеров, статей и тд.</p>
+							<p><b><a href="http://rref.su/" target="_blank">Перейти на сайт</a></b></p>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+						  </div>
+						</div>
+						<!-- /.modal-content --> 
+					  </div>
+					  <!-- /.modal-dialog --> 
+					</div>
+				  </div>
+				  <!-- /row --> 
+				  
+				  <div class="row">
+							 <!-- PORTFOLIO IMAGE 33 -->
+					<div class="col-md-4 grid mask mix category-2">
+					  <div class="grid mask">
+						<figure> <img class="img-responsive" src="assets/img/portfolio/folio25.jpg" alt="Привет expo">
+						  <figcaption>
+							<h5>Привет expo</h5>
+							<a data-toggle="modal" href="#myModal24" class="btn btn-default">Подробнее</a> </figcaption>
+						  <!-- /figcaption --> 
+						</figure>
+						<!-- /figure --> 
+					  </div>
+					  <!-- /grid-mask --> 
+					</div>
+					
+					 <div class="modal fade" id="myModal24" tabindex="-1" role="dialog" aria-hidden="true">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">Привет expo</h4>
+						  </div>
+						  <div class="modal-body">
+							<p><img class="img-responsive" src="assets/img/portfolio/folio25.jpg" alt="Привет expo"></p>
+							<p>Внесение новых объектов недвижимости, редактирование имеющися, размещение баннеров, статей и тд.</p>
+							<p><b><a href="http://privetexpo.ru/"  target="_blank">Перейти на сайт</a></b></p>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+						  </div>
+						</div>
+						<!-- /.modal-content --> 
+					  </div>
+					  <!-- /.modal-dialog --> 
+					</div>
+					
+							<!-- PORTFOLIO IMAGE 34 -->
+					<div class="col-md-4 grid mask mix category-2">
+					  <div class="grid mask">
+						<figure> <img class="img-responsive" src="assets/img/portfolio/folio26.jpg" alt="Exporealty">
+						  <figcaption>
+							<h5>Exporealty</h5>
+							<a data-toggle="modal" href="#myModal25" class="btn btn-default">Подробнее</a> </figcaption>
+						  <!-- /figcaption --> 
+						</figure>
+						<!-- /figure --> 
+					  </div>
+					  <!-- /grid-mask --> 
+					</div>
+					
+					 <div class="modal fade" id="myModal25" tabindex="-1" role="dialog" aria-hidden="true">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">Exporealty</h4>
+						  </div>
+						  <div class="modal-body">
+							<p><img class="img-responsive" src="assets/img/portfolio/folio26.jpg" alt="Exporealty"></p>
+							<p>Внесение новых объектов недвижимости, редактирование имеющися, размещение баннеров, статей и тд.</p>
+							<p><b><a href="http://exporealty.ru/" target="_blank">Перейти на сайт</a></b></p>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+						  </div>
+						</div>
+						<!-- /.modal-content --> 
+					  </div>
+					  <!-- /.modal-dialog --> 
+					</div>
+					
+									<!-- PORTFOLIO IMAGE 35 -->
+					<div class="col-md-4 grid mask mix category-2">
+					  <div class="grid mask">
+						<figure> <img class="img-responsive" src="assets/img/portfolio/folio27.jpg" alt="ЖБИ11">
+						  <figcaption>
+							<h5>ЖБИ11</h5>
+							<a data-toggle="modal" href="#myModal26" class="btn btn-default">Подробнее</a> </figcaption>
+						  <!-- /figcaption --> 
+						</figure>
+						<!-- /figure --> 
+					  </div>
+					  <!-- /grid-mask --> 
+					</div>
+					
+					 <div class="modal fade" id="myModal26" tabindex="-1" role="dialog" aria-hidden="true">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">ЖБИ11</h4>
+						  </div>
+						  <div class="modal-body">
+							<p><img class="img-responsive" src="assets/img/portfolio/folio27.jpg" alt="ЖБИ11"></p>
+							<p>Создание структуры сайта, добавление новых страниц, наполнение контентом, работа с прай-листами, обработка фото и тд.</p>
+							<p><b><a href="http://gbi11.ru/" target="_blank">Перейти на сайт</a></b></p>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+						  </div>
+						</div>
+						<!-- /.modal-content --> 
+					  </div>
+					  <!-- /.modal-dialog --> 
+					</div>
+				  </div>
+				  <!-- /row --> 
+				   <div class="row">
+							 <!-- PORTFOLIO IMAGE 36 -->
+					<div class="col-md-4 grid mask mix category-2">
+					  <div class="grid mask">
+						<figure> <img class="img-responsive" src="assets/img/portfolio/folio28.jpg" alt="Беталл">
+						  <figcaption>
+							<h5>Беталл</h5>
+							<a data-toggle="modal" href="#myModal67" class="btn btn-default">Подробнее</a> </figcaption>
+						  <!-- /figcaption --> 
+						</figure>
+						<!-- /figure --> 
+					  </div>
+					  <!-- /grid-mask --> 
+					</div>
+					
+					 <div class="modal fade" id="myModal67" tabindex="-1" role="dialog" aria-hidden="true">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">Беталл</h4>
+						  </div>
+						  <div class="modal-body">
+							<p><img class="img-responsive" src="assets/img/portfolio/folio28.jpg" alt="Беталл"></p>
+							<p>Создание структуры сайта, добавление новых страниц, наполнение контентом, работа с прай-листами, обработка фото и тд.</p>
+							<p><b><a href="http://betall.ru"  target="_blank">Перейти на сайт</a></b></p>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+						  </div>
+						</div>
+						<!-- /.modal-content --> 
+					  </div>
+					  <!-- /.modal-dialog --> 
+					</div>
+					
+							<!-- PORTFOLIO IMAGE 37 -->
+					<div class="col-md-4 grid mask mix category-2">
+					  <div class="grid mask">
+						<figure> <img class="img-responsive" src="assets/img/portfolio/folio29.jpg" alt="Skymec">
+						  <figcaption>
+							<h5>Skymec</h5>
+							<a data-toggle="modal" href="#myModal28" class="btn btn-default">Подробнее</a> </figcaption>
+						  <!-- /figcaption --> 
+						</figure>
+						<!-- /figure --> 
+					  </div>
+					  <!-- /grid-mask --> 
+					</div>
+					
+					 <div class="modal fade" id="myModal28" tabindex="-1" role="dialog" aria-hidden="true">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">Skymec</h4>
+						  </div>
+						  <div class="modal-body">
+							<p><img class="img-responsive" src="assets/img/portfolio/folio29.jpg" alt="Skymec"></p>
+							<p>Полное контентное обслуживание интернет-магазина.</p>
+							<p><b><a href="http://skymec.ru/" target="_blank">Перейти на сайт</a></b></p>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+						  </div>
+						</div>
+						<!-- /.modal-content --> 
+					  </div>
+					  <!-- /.modal-dialog --> 
+					</div>
+					
+									<!-- PORTFOLIO IMAGE 38 -->
+					<div class="col-md-4 grid mask mix category-2">
+					  <div class="grid mask">
+						<figure> <img class="img-responsive" src="assets/img/portfolio/folio30.jpg" alt="Кальян.рф">
+						  <figcaption>
+							<h5>Кальян.рф</h5>
+							<a data-toggle="modal" href="#myModal29" class="btn btn-default">Подробнее</a> </figcaption>
+						  <!-- /figcaption --> 
+						</figure>
+						<!-- /figure --> 
+					  </div>
+					  <!-- /grid-mask --> 
+					</div>
+					
+					 <div class="modal fade" id="myModal29" tabindex="-1" role="dialog" aria-hidden="true">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">Кальян.рф</h4>
+						  </div>
+						  <div class="modal-body">
+							<p><img class="img-responsive" src="assets/img/portfolio/folio30.jpg" alt="Кальян.рф"></p>
+							<p>Размещение статей, обработка фото, перелинковка.</p>
+							<p><b><a href="http://кальян.рф/" target="_blank">Перейти на сайт</a></b></p>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+						  </div>
+						</div>
+						<!-- /.modal-content --> 
+					  </div>
+					  <!-- /.modal-dialog --> 
+					</div>
+				  </div>
+				  <!-- /row --> 
+				  <div class="row">
+							 
+						<!-- PORTFOLIO IMAGE 39 -->
+					<div class="col-md-4 grid mask mix category-1">
+					  <div class="grid mask">
+						<figure> <img class="img-responsive" src="assets/img/portfolio/folio39.jpg" alt="Joor.me">
+						  <figcaption>
+							<h5>Joor.me</h5>
+							<a data-toggle="modal" href="#myModa131" class="btn btn-default">Подробнее</a> </figcaption>
+						  <!-- /figcaption --> 
+						</figure>
+						<!-- /figure --> 
+					  </div>
+					  <!-- /grid-mask --> 
+					</div>
+					
+					 <div class="modal fade" id="myModa131" tabindex="-1" role="dialog" aria-hidden="true">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">Joor.me</h4>
+						  </div>
+						  <div class="modal-body">
+							<p><img class="img-responsive" src="assets/img/portfolio/folio39.jpg" alt="Joor.me"></p>
+							<p>Написание тест-кейсов, тестирование верстки, функционала, кроссплатформенное тестирование.</p>
+							<p><b><a href="http://joor.me"  target="_blank">Перейти на сайт</a></b></p>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+						  </div>
+						</div>
+						<!-- /.modal-content --> 
+					  </div>
+					  <!-- /.modal-dialog --> 
+					</div>
+					<!-- PORTFOLIO IMAGE 40 -->
+					<div class="col-md-4 grid mask mix category-1">
+					  <div class="grid mask">
+						<figure> <img class="img-responsive" src="assets/img/portfolio/folio40.jpg" alt="Практика успеха">
+						  <figcaption>
+							<h5>Практика успеха</h5>
+							<a data-toggle="modal" href="#myModa132" class="btn btn-default">Подробнее</a> </figcaption>
+						  <!-- /figcaption --> 
+						</figure>
+						<!-- /figure --> 
+					  </div>
+					  <!-- /grid-mask --> 
+					</div>
+					
+					 <div class="modal fade" id="myModa132" tabindex="-1" role="dialog" aria-hidden="true">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">Практика успеха</h4>
+						  </div>
+						  <div class="modal-body">
+							<p><img class="img-responsive" src="assets/img/portfolio/folio40.jpg" alt="Практика успеха"></p>
+							<p>Составление плана тестирования, написание тест-кейсов, тестирование моб. приложения.</p>
+							<p><b><a href="http://practica-uspeha.ru/"  target="_blank">Перейти на сайт</a></b></p>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+						  </div>
+						</div>
+						<!-- /.modal-content --> 
+					  </div>
+					  <!-- /.modal-dialog --> 
+					  </div>
+					 <!-- PORTFOLIO IMAGE 41 -->
+					<div class="col-md-4 grid mask mix category-1">
+					  <div class="grid mask">
+						<figure> <img class="img-responsive" src="assets/img/portfolio/folio31.png" alt="CRM. Школа 2.0">
+						  <figcaption>
+							<h5>CRM. Школа 2.0</h5>
+							<a data-toggle="modal" href="#myModa133" class="btn btn-default">Подробнее</a> </figcaption>
+						  <!-- /figcaption --> 
+						</figure>
+						<!-- /figure --> 
+					  </div>
+					  <!-- /grid-mask --> 
+					</div>
+					
+					 <div class="modal fade" id="myModa133" tabindex="-1" role="dialog" aria-hidden="true">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">CRM. Школа 2.0</h4>
+						  </div>
+						  <div class="modal-body">
+							<p><img class="img-responsive" src="assets/img/portfolio/folio31.png" alt="CRM. Школа 2.0"></p>
+							<p>Написание тест-кейсов, тестирование функционала CRM.</p>
+							<p><b><a href="https://s20.online/"  target="_blank">Перейти на сайт</a></b></p>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+						  </div>
+						</div>
+						<!-- /.modal-content --> 
+					  </div>
+					  <!-- /.modal-dialog --> 
+					</div>
+					
+				  </div>
+				  <!-- /row -->
+			      <div class="row">
+							 
+						<!-- PORTFOLIO IMAGE 42 -->
+					<div class="col-md-4 grid mask mix category-3">
+					  <div class="grid mask">
+						<figure> <img class="img-responsive" src="assets/img/portfolio/folio34.jpg" alt="Teleofis.Учёт воды">
+						  <figcaption>
+							<h5>Teleofis.Учёт воды</h5>
+							<a data-toggle="modal" href="#myModal41" class="btn btn-default">Подробнее</a> </figcaption>
+						  <!-- /figcaption --> 
+						</figure>
+						<!-- /figure --> 
+					  </div>
+					  <!-- /grid-mask --> 
+					</div>
+					
+					 <div class="modal fade" id="myModal41" tabindex="-1" role="dialog"  aria-hidden="true">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">Teleofis.Учёт воды</h4>
+						  </div>
+						  <div class="modal-body">
+							<p><img class="img-responsive" src="assets/img/portfolio/folio34.jpg" alt="Teleofis.Учёт воды"></p>
+							<p>Написание тест-плана, составление тест-кейсов, тестирование приложения.</p>
+							<p><b><a href="http://teleofis.ru/solutions/water/uspd-teleofis-rtu102-v-sistemakh-uchyeta-vody/" class="portfolio-h"  target="_blank">Перейти на сайт</a></b></p>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+						  </div>
+						</div>
+						<!-- /.modal-content --> 
+					  </div>
+					  <!-- /.modal-dialog --> 
+					</div>
+											<!-- PORTFOLIO IMAGE 43 -->
+					<div class="col-md-4 grid mask mix category-3">
+					  <div class="grid mask">
+						<figure> <img class="img-responsive" src="assets/img/portfolio/123456.jpg" alt="Dog Locator">
+						  <figcaption>
+							<h5>Dog Locator</h5>
+							<a data-toggle="modal" href="#myModa149" class="btn btn-default">Подробнее</a> </figcaption>
+						  <!-- /figcaption --> 
+						</figure>
+						<!-- /figure --> 
+					  </div>
+					  <!-- /grid-mask --> 
+					</div>
+					
+					 <div class="modal fade" id="myModa149" tabindex="-1" role="dialog"  aria-hidden="true">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">Dog Locator</h4>
+						  </div>
+						  <div class="modal-body">
+							<p><img class="img-responsive" src="assets/img/portfolio/123456.jpg" alt="Dog Locator"></p>
+							<p>Тестирование приложения на всех этапах разработки.</p>
+							<p><b><a href="https://play.google.com/store/apps/details?id=net.startmobile.doggy&hl=ru" class="portfolio-h" target="_blank">Перейти в Google Play</a></b></p>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+						  </div>
+						</div>
+						<!-- /.modal-content --> 
+					  </div>
+					  <!-- /.modal-dialog --> 
+					</div>
+																<!-- PORTFOLIO IMAGE 44 -->
+					<div class="col-md-4 grid mask mix category-3">
+					  <div class="grid mask">
+						<figure> <img class="img-responsive" src="assets/img/portfolio/folio44.jpg" alt="PolyChat">
+						  <figcaption>
+							<h5>PolyChat</h5>
+							<a data-toggle="modal" href="#myModa150" class="btn btn-default">Подробнее</a> </figcaption>
+						  <!-- /figcaption --> 
+						</figure>
+						<!-- /figure --> 
+					  </div>
+					  <!-- /grid-mask --> 
+					</div>
+					
+					 <div class="modal fade" id="myModa150" tabindex="-1" role="dialog"  aria-hidden="true">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">PolyChat</h4>
+						  </div>
+						  <div class="modal-body">
+							<p><img class="img-responsive" src="assets/img/portfolio/folio44.jpg" alt="PolyChat"></p>
+							<p>Тестирование приложения на Android и iOS.</p>
+							<p><b><a href="https://play.google.com/store/apps/details?id=ru.antimaster.messenger&hl=ru" class="portfolio-h" target="_blank">Перейти в Google Play</a></b></p>
+							<p><b><a href="https://itunes.apple.com/ru/app/polychat/id1271476794?mt=8" class="portfolio-h" target="_blank">Перейти в App Store</a></b></p>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+						  </div>
+						</div>
+						<!-- /.modal-content --> 
+					  </div>
+					  <!-- /.modal-dialog --> 
+					</div>
+				  </div>
+				  
+				  
+				  
+				  
+				  
+				  
+				   <!-- /row -->
+			      <div class="row">
+							 
+						<!-- PORTFOLIO IMAGE 45 -->
+					<div class="col-md-4 grid mask mix category-3">
+					  <div class="grid mask">
+						<figure> <img class="img-responsive" src="assets/img/portfolio/folio46.jpg" alt="Swaper">
+						  <figcaption>
+							<h5>Swaper</h5>
+							<a data-toggle="modal" href="#myModal69" class="btn btn-default">Подробнее</a> </figcaption>
+						  <!-- /figcaption --> 
+						</figure>
+						<!-- /figure --> 
+					  </div>
+					  <!-- /grid-mask --> 
+					</div>
+					
+					 <div class="modal fade" id="myModal69" tabindex="-1" role="dialog"  aria-hidden="true">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">Swaper</h4>
+						  </div>
+						  <div class="modal-body">
+							<p><img class="img-responsive" src="assets/img/portfolio/folio46.jpg" alt="Swaper"></p>
+							<p>Приложения в процессе тестирования.</p>
+							<p><b><a href="https://itunes.apple.com/ru/app/swaper/id1318246513" class="portfolio-h"  target="_blank">Перейти в App Store</a></b></p>
+							<p><b><a href="https://play.google.com/store/apps/details?id=ru.swaper.mobile" class="portfolio-h"  target="_blank">Перейти в Google Play</a></b></p>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+						  </div>
+						</div>
+						<!-- /.modal-content --> 
+					  </div>
+					  <!-- /.modal-dialog --> 
+					</div>
+											<!-- PORTFOLIO IMAGE 46 -->
+					<div class="col-md-4 grid mask mix category-3">
+					  <div class="grid mask">
+						<figure> <img class="img-responsive" src="assets/img/portfolio/folio47.jpg" alt="Летайте с Алексом">
+						  <figcaption>
+							<h5>Летайте с Алексом</h5>
+							<a data-toggle="modal" href="#myModa151" class="btn btn-default">Подробнее</a> </figcaption>
+						  <!-- /figcaption --> 
+						</figure>
+						<!-- /figure --> 
+					  </div>
+					  <!-- /grid-mask --> 
+					</div>
+					
+					 <div class="modal fade" id="myModa151" tabindex="-1" role="dialog"  aria-hidden="true">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">Летайте с Алексом</h4>
+						  </div>
+						  <div class="modal-body">
+							<p><img class="img-responsive" src="assets/img/portfolio/folio47.jpg" alt="Летайте с Алексом"></p>
+							<p>Приложения на этапе разработки и тестирования.</p>
+							<p><b><a href="https://play.google.com/store/apps/details?id=us.startmobile.flywithalex" class="portfolio-h" target="_blank">Перейти в Google Play</a></b></p>
+							<p><b><a href="https://itunes.apple.com/ru/app/%D0%BB%D0%B5%D1%82%D0%B0%D0%B9%D1%82%D0%B5-%D1%81-%D0%B0%D0%BB%D0%B5%D0%BA%D1%81%D0%BE%D0%BC-%D0%B0%D0%B2%D0%B8%D0%B0%D0%B1%D0%B8%D0%BB%D0%B5%D1%82%D1%8B/id1341604728?l=uk&mt=8" class="portfolio-h" target="_blank">Перейти в App Store</a></b></p>
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+						  </div>
+						</div>
+						<!-- /.modal-content --> 
+					  </div>
+					  <!-- /.modal-dialog --> 
+					</div>
+																<!-- PORTFOLIO IMAGE 47 -->
+					<div class="col-md-4 grid mask mix category-3">
+					  <div class="grid mask">
+						<figure> <img class="img-responsive" src="assets/img/portfolio/folio48.jpg" alt="Sleki">
+						  <figcaption>
+							<h5>Sleki</h5>
+							<a data-toggle="modal" href="#myModa153" class="btn btn-default">Подробнее</a> </figcaption>
+						  <!-- /figcaption --> 
+						</figure>
+						<!-- /figure --> 
+					  </div>
+					  <!-- /grid-mask --> 
+					</div>
+					
+					 <div class="modal fade" id="myModa153" tabindex="-1" role="dialog"  aria-hidden="true">
+					  <div class="modal-dialog">
+						<div class="modal-content">
+						  <div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+							<h4 class="modal-title">Sleki</h4>
+						  </div>
+						  <div class="modal-body">
+							<p><img class="img-responsive" src="assets/img/portfolio/folio48.jpg" alt="Sleki"></p>
+							<p>Приложения на этапе разработки и тестирования.</p>
+							<!--<p><b><a href="https://play.google.com/store/apps/details?id=ru.antimaster.messenger&hl=ru" class="portfolio-h" target="_blank">Перейти в Google Play</a></b></p>
+							<p><b><a href="https://itunes.apple.com/ru/app/polychat/id1271476794?mt=8" class="portfolio-h" target="_blank">Перейти в App Store</a></b></p>-->
+						  </div>
+						  <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+						  </div>
+						</div>
+						<!-- /.modal-content --> 
+					  </div>
+					  <!-- /.modal-dialog --> 
+					</div>
+				  </div>
+			</div>
+		</div>
+	</div>
+</div>	
+    <div id="land_5" class="landingItem ">
+        <div class="bg_5 team" id="team">
+              <div class="container">
+					<div class="row centered">
+					  <h2 class="centered">Наша команда</h2>
+					  <hr>
+					  <div class="center-team">
+					  <div class="col-lg-13 centered"> <img class="img img-circle" src="assets/img/team/team01.jpg" height="120" width="130" alt="фото">
+						<h4>Александр</h4>
+						<p>Тестировщик</p>
+						
+
+							
+						       <h2><i class="fa fa-info"><span>инфо</span></i></h2>
+							
+								<div class="togglebox1">
+
+									<div class="block">
+
+										<table>
+											<tr>
+												<td class="nomer1">ФИО</td>
+												<td class="nomer2 borRadT">Сиротенко Александр Владимирович</td>
+											</tr>
+											
+											<tr>
+												<td class="nomer1">Опыт работы</td>
+												<td class="nomer2">
+													Более 6 лет
+												</td>
+											</tr>
+											<tr>
+												<td>Тестирование ПО</td>							
+												<td>
+													<ul>
+														<li>Тестирование методом черного ящика</li>
+														<li>Тестирование методом серого ящика</li>
+														<li>Планирование тестирования</li>
+														<li>Составления тест-планов и чек листов</li>
+														<li>Написание тест-кейсов и их выполнение</li>
+														<li>Отчеты по тестированию</li>
+												
+													</ul>
+													<br>
+													<p><b>Используемые техники тест дизайна:</b></p>
+													<ul>
+														<li>Анализа граничных значений</li>
+														<li>Техника эквивалентного разделения</li>
+														<li>Техника причина-следствие</li>
+														<li>Предугадывание ошибок</li>
+													</ul>
+													<br>
+													<p><b>При тестировании также используется:</b></p>
+													<ul>
+													    <li>Таблицы решений (table of decisions)</li>
+														<li>Ad Hoc тестирование</li>
+														<li>Pairwise тестирование</li>
+														<li>Диаграммы связей(mind map)</li>
+													</ul>
+													<br>
+													<p>Имеется парк мобильных устройств на ОС Android и iOS</p>
+													<br>
+													<p>Кроссплатформенное тестирование Windows, Mac OS, Linux</p>
+													<br>
+													<p>Баг-репорт в Word, Excel, возможно занесение багов в вашу баг трекинговую систему либо оформить в своей.</p>
+												</td>	
+											</tr>
+											<tr>
+												<td class="nomer1">Опыт управления людьми</td>
+												<td class="nomer2">3 человека</td>
+											</tr>
+											<tr>
+												<td class="nomer1">Владение языками</td>
+												<td class="nomer2">
+													<ul>
+														<li>Русский</li>
+														<li>Украинский</li>
+														<li>Oсновы English</li>
+													</ul>
+												</td>
+											</tr>
+											<tr>
+												<td class="nomer1">Знание программ и технологий</td>
+												<td class="nomer2">
+													<ul>
+														<li>HTML/CSS</li>
+														<li>Основы JavaScript(jQuery, jQuery UI)</li>
+														<li>CMS(Wordpress, Joomla, CS-Cart, 1C-Битрикс, OpenCart)</li>						
+														<li>SQL</li>
+														<li>Теория тестирования</li>
+														<li>Redmine</li>
+														<li>Mantis</li>
+														<li>You Track</li>
+														<li>Jira</li>
+														<li>Selenium IDE</li>
+														<li>Linux на уровне основных команд консоли<li>
+														<li>Genymotion, Xenu, PICT и др. инструменты</li>
+														<li>VMWare, Virtualbox</li>
+														<li>Firebag, Web Developer<li>
+														<li>TestLink<li>
+														<li>Основы JMeter<li>
+														<li>Git</li>
+													</ul>
+												</td>
+											</tr>
+											<tr>
+												<td class="nomer1">Дополнительные знания</td>
+												<td class="nomer2">
+													<ul>
+														<li>FTP</li>
+														<li>ХАМРР</li>
+														<li>MC offiсе(Word, Exel, Power Point)</li>
+														<li>Photoshop</li>
+														<li>Основы SEO</li>
+														<li>Сервисы: Яндекс Метрика, Spywords, 1stat, Yandex Wordstat</li>
+														
+													</ul>
+												</td>
+											</tr>
+											<tr>
+												<td class="nomer1">Личные качества</td>
+												<td class="nomer2">
+													<ul>
+														<li>Ответственность</li>
+														<li>Быстрообучаемость</li>
+														<li>Честность</li>
+														<li>Пунктуальность</li>
+													</ul>
+												</td>
+											</tr>
+											<tr>
+												<td class="nomer1">Цель</td>
+												<td class="nomer2">Участие в интересных и долгосрочных проектах</td>
+											</tr>
+											<tr>
+												<td class="nomer1">Увлечения</td>
+												<td class="nomer2 borRadB">
+													<ul>
+														<li>Спорт</li>
+														<li>Web-технологии</li>
+														<li>Фото</li>
+														<li>Туризм</li>
+													</ul>
+												
+												</td>
+											</tr>
+										
+										</table>
+
+									</div>
+
+								</div>
+
+
+					     </div>
+					  	
+					  <div class="col-lg-13 centered"> <img class="img img-circle" src="assets/img/team/team02.jpg" height="120" width="130" alt="фото">
+						<h4>Евгений</h4>
+						<p>Контент-менеджер</p>
+						<h2><i class="fa fa-info"><span>инфо</span></i></h2> 
+														<div class="togglebox1">
+
+									<div class="block">
+
+										<table>
+											<tr>
+												<td class="nomer1">ФИО</td>
+												<td class="nomer2 borRadT">Сиротенко Евгений Владимирович</td>
+											</tr>
+											
+											<tr>
+												<td class="nomer1">Опыт работы</td>
+												<td class="nomer2">
+													Более 7 лет
+												</td>
+											</tr>
+											<tr>
+												<td>Контент-менеджмент</td>							
+												<td>
+													<ul>
+														<li>Ввод новых позиций интернет-магазинов</li>
+														<li>Редактирование позиций интернет-магазинов</li>
+														<li>Ведение групп в социальных сетях</li>
+														<li>Создание и изменение разделов сайтов</li>
+														<li>Актуализация цен</li>
+														<li>Настройка фильтров</li>
+														<li>Верстка страниц</li>
+														<li>Составление СЯ</li>
+														<li>Анализ яндекс метрики</li>
+														<li>Обработка фото</li>
+														<li>Рерайт</li>
+														<li>Контроль корректной работы сайта</li>
+														<li>Написание ТЗ копирайтерам, дизайнерам, верстальщикам</li>
+													</ul>
+													
+												</td>	
+											</tr>
+											<tr>
+												<td class="nomer1">Владение языками</td>
+												<td class="nomer2">
+													<ul>
+														<li>Русский</li>
+														<li>Украинский</li>
+														<li>Oсновы English</li>
+													</ul>
+												</td>
+											</tr>
+											<tr>
+												<td class="nomer1">Знание программ и технологий</td>
+												<td class="nomer2">
+													<ul>
+														<li>HTML/CSS</li>
+														<li>CMS(Wordpress, Joomla, CS-Cart, 1C-Битрикс, OpenCart, Drupal, MODX)</li>	
+														<li>FTP</li>
+														<li>MC offiсе(Word, Exel, Power Point)</li>
+														<li>Photoshop</li>
+														<li>Основы SEO</li>
+														<li>Сервисы: Яндекс Метрика, Spywords, 1stat, Yandex Wordstat</li>
+														<li>Firebag, Web Developer<li>
+														
+													</ul>
+												</td>
+											</tr>
+											<tr>
+												<td class="nomer1">Дополнительные знания</td>
+												<td class="nomer2">
+													<ul>
+														<li>VMWare, Virtualbox</li>
+														
+													</ul>
+												</td>
+											</tr>
+											<tr>
+												<td class="nomer1">Личные качества</td>
+												<td class="nomer2">
+													<ul>
+														<li>Ответственность</li>
+														<li>Быстрообучаемость</li>
+														<li>Честность</li>
+														<li>Пунктуальность</li>
+													</ul>
+												</td>
+											</tr>
+											<tr>
+												<td class="nomer1">Цель</td>
+												<td class="nomer2">Участие в интересных и  долгосрочных проектах</td>
+											</tr>
+											<tr>
+												<td class="nomer1">Увлечения</td>
+												<td class="nomer2 borRadB">
+													<ul>
+														<li>Фото</li>
+														<li>Web-технологии</li>
+														<li>Бильярд</li>
+														<li>Туризм</li>
+													</ul>
+												
+												</td>
+											</tr>
+										
+										</table>
+
+									</div>
+
+								</div>
+						
+						</div>
+					  </div>
+						
+					  
+						
+
+
+
+		
+
+		<!--Content-->
+
+
+					  
+					</div>
+				</div>
+        </div>
+    </div>
+	    <div id="land_6" class="landingItem ">
+			<div class="bg_6 price" id="price">
+				<div class="container">
+					 <div class="row entered">
+					  <h2 class="centered">Цены</h2>
+					  <hr>
+					  
+					<ul class="priceTable greenStyle" id="priceTable1">
+					<li class="priceItem">
+						<ul class="padding-price">
+							<li class="header header-margin">Тестирование</li>
+							<li class="odd1">Месяц работы от:</li>
+							<li data-animate="tada"><span class="event1 price">12000 гривен</span></li>
+							<li data-animate="tada"><span class="event1 price">30000 рублей</span></li>
+							<li  class="odd1">Час работы от:</li>			
+							<li><span class="event1 price">110 гривен</span></li>
+							<li><span class="event1 price">300 рублей</span></li>			
+							<li class="button"><a href="#contact">Заказать</a></li>			
+						</ul>		
+					</li>
+					<li class="priceItem active">
+						<ul class="padding-price">
+							<li class="header">Контент-менеджмент</li>
+							<li data-animate="rotateIn"  class="odd1">Месяц работы от:</li>
+							<li><span class="event1 price">9000 гривен</span></li>
+							<li><span class="event1 price">25000 рублей</span></li>
+							<li data-animate="rotateIn"  class="odd1">Час работы от:</li>
+							<li><span class="event1 price">80 гривен</span></li>
+							<li><span class="event1 price">200 рублей</span><li>			
+							<li class="button"><a href="#contact">Заказать</a></li>			
+						</ul>				
+					</li>
+					<li class="priceItem">
+						<ul class="padding-price">
+							<li class="header">Юзабилити-анализ</li>
+							<li data-animate="lightSpeedIn"  class="odd1">Месяц работы от:</li>
+							<li><span class="event1 price">12000 гривен</span></li>
+							<li><span class="event1 price">30000 рублей</span></li>
+							<li  class="odd1">Час работы от:</li>
+							<li><span class="event1 price">110 гривен</span></li>
+							<li><span class="event1 price">300 рублей</span></li>			
+							<li class="button"><a href="#contact">Заказать</a></li>			
+						</ul>				
+					</li>
+
+					</ul>
+					
+					 </div>
+				</div>
+			</div>
+        </div>
+		<!-- ==== DOC ==== -->
+	    <div id="land_7" class="landingItem ">
+			<div class="bg_7"  id="doc">
+				   <div class="container">
+						 <div class="row centered">
+						   <h2 class="centered">Отчеты по тестированию</h2>
+						   <hr>
+						
+						   	<a href="https://docs.google.com/spreadsheets/d/1WMisbODmVI7t1SjWVMbygLkK1K970qwDoQLpK2WZXds" target="_blank" class="btn-slide">
+							 <span class="circle"><span class="icon-long-arrow-right "></span></span>
+							 <span class="title">Parfumoff</span>
+							 <span class="title-hover">Смотреть!</span>
+						   </a>
+						   
+							<a href="https://docs.google.com/spreadsheets/d/1-6xCX-oXUw7MHY_4wyONCHc324nCtJjU0doinoJqTs4" target="_blank" class="btn-slide">
+							 <span class="circle"><span class="icon-long-arrow-right "></span></span>
+							 <span class="title" >Undersite.ru</span>
+							 <span class="title-hover">Смотреть!</span>
+						   </a>
+						   
+						   <a href="https://docs.google.com/document/d/1zWfynbCkrC5vz8w76W5jIyVQ0KnBtyTH5M3y0LWOn1U" target="_blank" class="btn-slide">
+							 <span class="circle"><span class="icon-long-arrow-right "></span></span>
+							 <span class="title">A-safe.ru</span>
+							 <span class="title-hover">Смотреть!</span>
+						   </a>
+						   
+						   <a href="https://docs.google.com/document/d/1Fd3YB7kVbjsm9eftKLBbgcGtNOoSdwHNimD_bYPkoX8/" target="_blank" class="btn-slide">
+							 <span class="circle"><span class="icon-long-arrow-right "></span></span>
+							 <span class="title">PolyChat</span>
+							 <span class="title-hover">Смотреть!</span>
+						   </a>
+						   
+						   <a href="https://docs.google.com/spreadsheets/d/1OtEJdKCFWI1-lQsxbubB9Q7jGC8XdG0nRedMipEIhCo" target="_blank" class="btn-slide">
+							 <span class="circle"><span class="icon-long-arrow-right "></span></span>
+							 <span class="title">GoldenPlaza</span>
+							 <span class="title-hover">Смотреть!</span>
+						   </a>
+
+						 </div>
+					</div>
+			</div>
+        </div>
+		<!-- ==== Контакты ==== -->
+	    <div id="land_8" class="landingItem ">
+			<div  id="contact1" class="bg_8 contact">
+				<div class="container">
+						<div class="row">
+						  <h2 class="centered">Контакты</h2>
+						  <hr>
+						  <p style="margin-bottom:20px;">Мы с удовольствием ответим на все ваши вопросы. <br>Свяжитесь с нами любым удобным для вас способом.</p>
+						  <div class="col-md-4 centered"> <i class="fa fa-map-marker fa-2x"></i>
+							<p>Украина, Харьков</p>
+						  </div>
+						  <div class="col-md-4"> <i class="fa fa-envelope-o fa-2x"></i>
+							<p>aliyrd.xyz@gmail.com</p>
+						  </div>
+						  <div class="col-md-4"> <i class="fa fa-skype fa-2x"></i>
+							<p> panteon1982@yandex.ru</p>
+						  </div>
+						</div>
+					<div class="row">
+					<div class="col-lg-8 col-lg-offset-2 centered">
+						
+						<form action="http://www.formm.ru/mail/" method="post" onsubmit="return formm.sub(this);" id="contact" class="form"><input type="hidden" name="check" value="name:Ваше имя?!.email:Укажите правильный e-mail!.text:Напишите сообщение!.captcha:Ошибка в проверочном коде!"/><input type="hidden" name="subject" value="Сообщение с сайта"/><input type="hidden" name="colors" value="ffffff.ffffee.880000.880000"/>
+					
+					
+						<div class="row">
+							  <div class="col-xs-6 col-md-6 form-group">
+							   <input class="form-control" id="name" name="name" placeholder="Имя" type="text" required />
+							  </div>
+							  <div class="col-xs-6 col-md-6 form-group">
+							   <input class="form-control" id="email" name="email" placeholder="Email" type="email" required />
+							  </div>
+						</div>
+							 
+						<textarea name="text" class="form-control" id="message" placeholder="Сообщение" rows="5"></textarea>
+							 
+						<div style="width:50%;min-height:50px;margin-top:10px;opacity:.5; float: left;">
+							<a style="display:block;width:100px;text-align:center;float:left; " href="http://www.formm.ru/">форма обратной связи</a>
+							<img style="border:none;cursor:pointer;margin:9px;float:left; opacity:.5;" src="http://www.formm.ru/refresh/refresh.png" alt="formm.refresh" title="refresh" onclick="formm.cap();"/>
+						</div>
+						<div style="margin: 10px 0 0 160px;">
+							<input name="captcha" type="text" class="form-control form-control1"  maxlength="6" />
+						</div>
+				
+						<div class="row">
+							<div class="col-xs-12 col-md-12">
+							<button class="btn btn btn-lg" type="submit">Отправить</button>
+							</div>
+						</div>
+						<script type="text/javascript" src="http://www.formm.ru/mail/js/f.p.js"></script></form> 
+							<!-- form --> 
+					</div>
+					</div>
+					<!-- row --> 
+    
+				</div>
+			</div>
+        </div>
+	    
+<div id="footerwrap">
+  <div class="container container-footer">
+    <div class="row">
+		<div id="g_navcontainer">	
+			<h3>Сотрудничество</h3>
+			<h4>Контент-менеджмент</h4>
+			<ul>
+				
+				<li><img src="assets/img/logo-klient.png" alt="digbox.ru"></li>	
+				<li><img src="assets/img/logo-klient5.jpg" alt="skymec.ru"></li>	
+				<li><img src="assets/img/logo-klient12.jpg" alt="djimsk.ru"></li>
+				<!--<li><a href="http://celsius24.ru/" target="_blank" rel="nofollow"><img src="assets/img/logo-klient4.jpg" alt="celsius24.ru"></a></li>	-->
+			</ul>
+			<h4>Тестирование</h4>
+			<ul style="height:130px;">
+			<li style="margin-bottom:2px;"><a href="http://start-mobile.net/ru/mobile-applications-for-startups/" target="_blank" rel="nofollow"><img src="assets/img/klient10.jpg" alt="start-mobile.net"></a></li>
+			<li><a href="http://pichesky.ru/" target="_blank" rel="nofollow"><img src="assets/img/klient11.jpg" alt="http://pichesky.ru/"></a></li>
+			</ul>
+			<!-- <ul>			
+				
+			<li style="height:40px; margin-top:10px; display: block;" class="seo-logo"><a title="Раскрутка сайта в поисковых системах" href="http://soosle.ru/"><img src="http://soosle.ru/banner1.png" alt="Поисковое продвижение сайта" /></a></li>
+			<!-- "soosle.ru" 
+			<li  style="height:20px;  display: block;" class="seo-logo"><a title="Журнал о строительстве и отделке" href="http://kolonna.info/"><img src="http://soosle.ru/free.png" alt="Ремонт своими руками" /></a></li>				
+			</ul> -->
+
+		</div> 
+			<div class="liveinternet">
+				<!--LiveInternet counter--><script type="text/javascript"><!--
+				document.write("<a href='//www.liveinternet.ru/click' "+
+				"target=_blank><img src='//counter.yadro.ru/hit?t18.6;r"+
+				escape(document.referrer)+((typeof(screen)=="undefined")?"":
+				";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+				screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+				";"+Math.random()+
+				"' alt='' title='LiveInternet: показано число просмотров за 24"+
+				" часа, посетителей за 24 часа и за сегодня' "+
+				"border='0' width='88' height='31'><\/a>")
+				//--></script><!--/LiveInternet-->
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+<script type="text/javascript" src="assets/js/retina.js"></script> 
+<script type="text/javascript" src="assets/js/jquery.easing.1.3.js"></script> 
+<script src="assets/js/sort.js"></script> 
+<script type="text/javascript" src="assets/js/bootstrap.min.js"></script> 
+
+
+</body>
+</html>

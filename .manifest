@@ -1,0 +1,29 @@
+CACHE MANIFEST
+# Версия 1
+
+images/logo.png
+
+CACHE:
+index.html
+assets\css\main.css
+assets\css\pricetable.css
+assets\css\liLanding.css
+assets\css\font-awesome.min.css
+assets\css\font-awesome.css
+assets\css\bootstrap.css
+assets\img\about\about1.jpg
+assets\img\header_bg.jpg
+assets\img\logo.jpg
+assets\img\team\team01.jpg
+assets\img\team\team02.jpg
+assets\img\logo-klient.png
+assets\img\logo-klient2.png
+assets\img\logo-klient3.png
+assets\img\logo-klient4.png
+assets\img\logo-klient5.png
+
+
+NETWORK:
+
+
+FALLBACK:
