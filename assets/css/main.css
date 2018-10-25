@@ -921,6 +921,7 @@ position: relative;
 	list-style:none;
 	text-align:center;
 	position:relative; 
+	line-height:53px;
 }
 .landingMenu li {
 	display:inline-block;
